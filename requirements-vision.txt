@@ -1,0 +1,5 @@
+# Optional dependencies for FindBack Vision.
+# Install with: python -m pip install -r requirements-vision.txt
+Pillow>=10.0
+numpy>=1.26
+sentence-transformers>=5.0

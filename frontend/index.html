@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FindBack — نظام متكامل لإدارة المفقودات والموجودات ومطابقتها بدقة.">
+  <meta name="theme-color" content="#123f3f">
+  <title>FindBack | نظام استعادة المفقودات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23123f3f'/%3E%3Cpath d='M19 39c8-1 7-18 20-18 8 0 11 7 6 13-5 6-14 1-18 9' fill='none' stroke='%23f2785c' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='19' cy='42' r='5' fill='%23efc66d'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=22">
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <div id="publicSite" class="public-site">
+    <header class="public-header">
+      <a class="brand" href="#top" aria-label="FindBack الرئيسية">
+        <span class="brand-mark"><b></b><i></i></span>
+        <span><strong>FindBack</strong><small>نظام الاستعادة</small></span>
+      </a>
+      <nav class="public-nav" aria-label="التنقل الرئيسي">
+        <a href="#system">كيف يعمل</a><a href="#engine">آلية المطابقة</a><a href="#stories">أمثلة البلاغات</a>
+      </nav>
+      <div class="header-actions"><button class="language-toggle" data-language-toggle type="button" aria-label="تغيير اللغة">EN</button><button class="text-action" data-open-auth="login">تسجيل الدخول</button><button class="neon-button" data-public-create>إنشاء بلاغ <span>↙</span></button></div>
+      <button id="mobileMenuButton" class="mobile-menu" aria-label="فتح القائمة">☰</button>
+    </header>
+
+    <main id="top">
+      <section class="hero-v4">
+        <div class="hero-copy-v4">
+          <div class="signal-label"><span>●</span> استعادة تبدأ من دليل واضح</div>
+          <h1>من بلاغٍ دقيق<br><em>إلى استعادة آمنة.</em></h1>
+          <p>يساعد FindBack من فقد غرضًا ومن عثر عليه على توثيق التفاصيل، اكتشاف أقرب تطابق، والتواصل بخصوصية حتى اكتمال التسليم.</p>
+          <div class="hero-actions-v4"><button class="neon-button large" data-public-create>إنشاء بلاغ <span>←</span></button><button class="outline-button light" data-open-auth="login">تسجيل الدخول</button></div>
+          <div class="hero-specs"><div><span>01</span><strong>تفاصيل قابلة للتحقق</strong></div><div><span>02</span><strong>نتائج مرتبة بالأقرب</strong></div><div><span>03</span><strong>تواصل بعد الموافقة</strong></div></div>
+        </div>
+        <div class="hero-visual-v4">
+          <div class="hero-glow"></div>
+          <img src="assets/campus-bag-v2.webp" alt="حقيبة متروكة على مقعد داخل مكتبة">
+          <div class="scan-card scan-a"><span>بلاغ موجود</span><strong>حقيبة خضراء صغيرة</strong><small>عمّان · صورة مرفقة</small></div>
+          <div class="scan-card scan-b"><div class="score-ring">86%</div><p><strong>تطابق موثوق</strong><small>الوصف · اللون · المكان</small></p></div>
+          <div class="coordinates">خصوصية مدمجة<br>تواصل بعد الموافقة</div>
+        </div>
+        <div class="hero-index">بلاغ ← استعادة</div>
+      </section>
+
+      <section id="system" class="system-section page-pad">
+        <div class="system-head"><div><span class="eyebrow">رحلة الاستعادة</span><h2>مسار مفهوم،<br><em>من دون خطوات مبهمة.</em></h2></div><p>يبقى المستخدم داخل مسار واحد: يوثّق الغرض، يراجع الأدلة، يوافق على التواصل، ثم يؤكد الاستلام.</p></div>
+        <div class="system-grid">
+          <article class="system-card purple"><span class="card-code">01 / البلاغ</span><div class="card-symbol">＋</div><h3>وثّق ما تعرفه</h3><p>سجّل نوع الغرض ولونه ومكانه وتاريخه، وأضف صورة واضحة متى توفرت.</p></article>
+          <article class="system-card orange"><span class="card-code">02 / المطابقة</span><div class="card-symbol">%</div><h3>راجع أقرب النتائج</h3><p>تُقارن بلاغات المفقودات بالموجودات وتُرتب وفق إشارات يمكن تفسيرها.</p></article>
+          <article class="system-card acid"><span class="card-code">03 / التواصل</span><div class="card-symbol">↔</div><h3>احمِ بيانات الطرفين</h3><p>لا تُفتح المحادثة الخاصة إلا بعد إرسال طلب التواصل وقبوله.</p></article>
+          <article class="system-card cyan"><span class="card-code">04 / الاستعادة</span><div class="card-symbol">✓</div><h3>أغلق الحالة بثقة</h3><p>بعد التسليم يؤكد المستلم العملية، وتُغلق البلاغات المرتبطة مع حفظ النتيجة.</p></article>
+        </div>
+      </section>
+
+      <section id="engine" class="engine-section page-pad">
+        <div class="engine-image"><img loading="lazy" src="assets/phone-scene-v2.webp" alt="هاتف متروك على طاولة في مقهى"><div class="engine-image-tag">مطابقة متعددة المعايير</div></div>
+        <div class="engine-copy"><span class="eyebrow light">محرك المطابقة الهجين</span><h2>كل نتيجة معها<br><em>سبب واضح.</em></h2><p>يجمع FindBack بين بيانات البلاغ والتشابه البصري. النتيجة لا تعتمد على كلمة واحدة، بل على مجموعة أدلة تساعد المستخدم على اتخاذ قرار آمن.</p><div class="weight-list"><div><span>بيانات البلاغ</span><b>65%</b><i style="--w:65%"></i></div><div><span>بصمة الصورة</span><b>35%</b><i style="--w:35%"></i></div><div><span>حد عرض النتيجة</span><b>50%</b><i style="--w:50%"></i></div></div><button class="neon-button" data-public-create>إنشاء بلاغ للمطابقة <span>←</span></button></div>
+      </section>
+
+      <section class="proof-section page-pad">
+        <div class="proof-number"><strong>50<sup>%</sup></strong><span>الحد الأدنى لإظهار النتيجة</span></div>
+        <div class="proof-copy"><span class="eyebrow">حد جودة النتائج</span><h2>نتائج أقل،<br>لكن أكثر صلة.</h2><p>لا تدخل النتيجة قائمة الاقتراحات إلا بعد تجاوز الحد المطلوب، حتى تبقى المراجعة مركّزة وقابلة للتحقق.</p></div>
+        <div class="proof-orbit"><i></i><i></i><i></i><span>50+</span></div>
+      </section>
+
+      <section id="stories" class="visual-stories page-pad">
+        <div class="stories-head"><span class="eyebrow light">تفاصيل من الواقع</span><h2>صورة صغيرة،<br><em>قد تحسم المطابقة.</em></h2></div>
+        <div class="story-grid">
+          <figure class="story-wide"><img loading="lazy" src="assets/items-flatlay.webp" alt="هاتف ومفاتيح ومحفظة وحقيبة مرتبة على سطح"><figcaption><span>01 / التفاصيل</span><strong>اللون والخامة والعلامة الفارقة أدلة قابلة للمقارنة.</strong></figcaption></figure>
+          <figure><img loading="lazy" src="assets/phone-scene-v2.webp" alt="هاتف متروك على طاولة مقهى"><figcaption><span>02 / المكان</span><strong>آخر مكان معروف يضيّق نطاق البحث.</strong></figcaption></figure>
+          <figure><img loading="lazy" src="assets/community-return.webp" alt="تسليم حقيبة إلى صاحبتها"><figcaption><span>03 / التواصل</span><strong>الموافقة تسبق تبادل أي معلومات خاصة.</strong></figcaption></figure>
+          <figure class="story-color"><div><span>مسار الاستعادة</span><b>بلاغ<br>← مطابقة<br>← استعادة</b></div></figure>
+          <figure><img loading="lazy" src="assets/campus-bag-v2.webp" alt="حقيبة على مقعد داخل مكتبة"><figcaption><span>04 / الصورة</span><strong>الصورة الواقعية تسرّع التحقق عند ظهور النتيجة.</strong></figcaption></figure>
+        </div>
+      </section>
+
+      <section class="launch-section"><span class="eyebrow light">ابدأ الآن</span><h2>كل استعادة ناجحة<br><em>تبدأ ببلاغ واضح.</em></h2><p>أنشئ حسابًا، أضف ما تعرفه، وراجع النتائج التي يستطيع النظام تفسيرها لك.</p><button class="neon-button large" data-public-create>إنشاء حساب والبدء <span>←</span></button><div class="launch-code">بلاغ · مطابقة · استعادة</div></section>
+    </main>
+
+    <footer class="public-footer"><a class="brand" href="#top"><span class="brand-mark"><b></b><i></i></span><span><strong>FindBack</strong><small>منصة الاستعادة</small></span></a><div><a href="#system">كيف يعمل</a><a href="#engine">المطابقة</a><a href="#stories">أمثلة البلاغات</a></div><p>بلاغ واضح · مطابقة مفسّرة · تواصل آمن</p><small>© 2026 FindBack</small></footer>
+  </div>
+
+  <div id="authModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="modal-backdrop" data-close-auth></div>
+    <div class="auth-panel-v4">
+      <button class="modal-close" data-close-auth aria-label="إغلاق">×</button>
+      <div class="auth-art"><img src="assets/items-flatlay.webp" alt="أغراض شخصية مصورة بوضوح"><div><span>دخول آمن</span><h2>بلاغاتك ومطابقاتك<br>في مساحة خاصة.</h2></div></div>
+      <div class="auth-forms"><div class="auth-tabs"><button id="loginTab" class="active">دخول</button><button id="registerTab">حساب جديد</button></div>
+        <form id="loginForm" class="auth-form"><span class="form-code">دخول المستخدم</span><h2 id="authTitle">تسجيل الدخول</h2><p>الوصول إلى البلاغات والمطابقات والمتابعة.</p><label>البريد الإلكتروني<input id="loginEmail" type="email" autocomplete="email" placeholder="name@example.com" required></label><label>كلمة المرور<input id="loginPassword" type="password" autocomplete="current-password" placeholder="••••••••" required></label><button class="neon-button full" type="submit">دخول النظام <span>←</span></button></form>
+        <form id="registerForm" class="auth-form hidden"><span class="form-code">مستخدم جديد</span><h2>إنشاء حساب</h2><p>ابدأ بإدارة بلاغاتك ومراجعة النتائج.</p><label>الاسم الكامل<input id="registerName" type="text" autocomplete="name" placeholder="الاسم الكامل" required></label><label>البريد الإلكتروني<input id="registerEmail" type="email" autocomplete="email" placeholder="name@example.com" required></label><label>كلمة المرور<input id="registerPassword" type="password" autocomplete="new-password" minlength="6" placeholder="6 أحرف على الأقل" required></label><button class="neon-button full" type="submit">إنشاء الحساب <span>←</span></button></form>
+      </div>
+    </div>
+  </div>
+
+  <div id="userShell" class="user-shell hidden">
+    <aside class="user-sidebar">
+      <a class="brand app-brand" href="#" data-user-view="userDashboard"><span class="brand-mark"><b></b><i></i></span><span><strong>FindBack</strong><small>مساحة المستخدم</small></span></a>
+      <button class="language-toggle sidebar-language" data-language-toggle type="button" aria-label="تغيير اللغة">EN</button>
+      <nav class="side-nav"><button class="active" data-user-view="userDashboard"><i>▦</i><span>لوحة المتابعة</span></button><button data-user-view="userExplore"><i>⌕</i><span>استكشف البلاغات</span></button><button data-user-view="userCreate"><i>＋</i><span>بلاغ جديد</span></button><button data-user-view="userMine"><i>◎</i><span>بلاغاتي</span></button><button data-user-view="userConnect"><i>✦</i><span>مركز التواصل</span><b id="userCommunicationBadge" class="nav-badge hidden">0</b></button><button data-user-view="userNotifications"><i>◉</i><span>الإشعارات</span><b id="userNotificationBadge" class="nav-badge hidden">0</b></button></nav>
+      <button id="userLogout" class="side-logout">تسجيل الخروج <span>↗</span></button>
+    </aside>
+
+    <main class="user-main">
+      <header class="app-topbar"><div><span id="userDate">نظرة عامة</span><h1 id="userPageTitle">لوحة المتابعة</h1></div><div class="user-profile"><div><strong id="userName">المستخدم</strong><small>حساب شخصي</small></div><span id="userInitial">U</span></div></header>
+
+      <section id="userDashboard" class="user-view active-user-view">
+        <div class="dashboard-hero">
+          <div><span>مساحتك الشخصية</span><h2 id="userWelcomeTitle">أهلًا، هذه مساحة بلاغاتك.</h2><p>تابع حالة كل بلاغ، راقب المطابقات، وانتقل من التسجيل إلى الاستعادة ضمن مسار واحد.</p><div><button class="neon-button" data-user-view="userCreate">＋ بلاغ جديد</button><button class="outline-button light" data-user-view="userExplore">استكشف النظام</button></div></div>
+          <div class="dashboard-hero-art"><img src="assets/items-flatlay.webp" alt="مجموعة أغراض شخصية مصورة بوضوح"><span class="dash-tag">مطابقة مباشرة</span></div>
+        </div>
+
+        <div id="userStatsGrid" class="user-stats"></div>
+
+        <div class="dashboard-section-head"><div><span>مركز المطابقة</span><h2>أقرب النتائج لبلاغاتك</h2><p>كل بلاغ مفتوح مع أقرب نتيجة متاحة حاليًا.</p></div><button class="link-action" data-user-view="userMine">إدارة بلاغاتي ←</button></div>
+        <div id="smartMatchList" class="smart-match-list"></div>
+
+        <div class="dashboard-split">
+          <section class="quality-panel"><div class="panel-code">REPORT QUALITY / 07</div><h2>كيف ترفع دقة المطابقة؟</h2><div class="quality-list"><div><span>01</span><p><strong>استخدم اسمًا محددًا</strong><small>هاتف Samsung بدل هاتف فقط.</small></p></div><div><span>02</span><p><strong>أضف العلامة الفارقة</strong><small>خدش، حافظة، نقش، أو محتوى مميز.</small></p></div><div><span>03</span><p><strong>حدد المكان بدقة</strong><small>المنطقة والمبنى أو أقرب نقطة معروفة.</small></p></div><div><span>04</span><p><strong>ارفع صورة واضحة</strong><small>الصورة تنشئ بصمة بصرية تقارن الشكل والألوان والتفاصيل.</small></p></div></div></section>
+          <section class="return-flow"><span>STATUS FLOW</span><h2>دورة البلاغ</h2><div class="flow-track"><div class="done"><i>1</i><p><strong>مفتوح</strong><small>جاهز للمقارنة</small></p></div><div><i>2</i><p><strong>متطابق</strong><small>تم العثور على نتيجة</small></p></div><div><i>3</i><p><strong>مغلق</strong><small>اكتملت الحالة</small></p></div></div></section>
+        </div>
+
+        <div class="dashboard-section-head"><div><span>NETWORK FEED</span><h2>أحدث البلاغات المفتوحة</h2></div><button class="link-action" data-user-view="userExplore">عرض جميع البلاغات ←</button></div>
+        <div id="userRecentGrid" class="reports-grid"></div>
+      </section>
+
+      <section id="userExplore" class="user-view">
+        <div class="page-title"><span>REPORT NETWORK</span><h1>استكشف البلاغات</h1><p>ابحث حسب الاسم أو النوع أو التصنيف أو الموقع.</p></div>
+        <div class="filters-bar"><label><span>⌕</span><input id="reportSearch" type="search" placeholder="اكتب اسم الغرض أو الموقع..."></label><select id="reportTypeFilter"><option value="">كل الأنواع</option><option value="lost">مفقود</option><option value="found">موجود</option></select><button id="searchReportsButton" class="neon-button">بحث</button></div>
+        <div id="allReportsGrid" class="reports-grid"></div>
+      </section>
+
+      <section id="userCreate" class="user-view">
+        <div class="create-layout"><aside><span>بلاغ جديد</span><h1>كل تفصيل<br><em>يحسّن المطابقة.</em></h1><p>اكتب معلومات يمكن لصاحب الغرض أو من عثر عليه التحقق منها بسهولة.</p><img src="assets/campus-bag-v2.webp" alt="حقيبة متروكة على مقعد داخل مكتبة"><div class="aside-facts"><div><b>6</b><small>حقول أساسية</small></div><div><b>5MB</b><small>أقصى حجم للصورة</small></div></div></aside>
+          <form id="createReportForm" class="create-form"><div class="form-section-title"><span>01</span><div><h2>نوع الإشارة</h2><p>حدد ما إذا كنت تبحث عن الغرض أو عثرت عليه.</p></div></div><div class="report-type-options"><label class="type-option selected"><input type="radio" name="reportType" value="lost" checked><i>−</i><strong>بلاغ مفقود</strong><small>أبحث عن غرض فقدته</small></label><label class="type-option"><input type="radio" name="reportType" value="found"><i>＋</i><strong>بلاغ موجود</strong><small>أبحث عن صاحب الغرض</small></label></div><div class="form-section-title second"><span>02</span><div><h2>بيانات الغرض</h2><p>أدخل معلومات دقيقة وقابلة للمقارنة.</p></div></div><div class="form-grid"><label>اسم الغرض<input id="itemName" type="text" placeholder="مثال: Samsung Galaxy S24" required></label><label>التصنيف<select id="itemCategory" required><option value="">اختر التصنيف</option><option value="phones">هواتف</option><option value="wallets">محافظ</option><option value="bags">حقائب</option><option value="documents">وثائق</option><option value="keys">مفاتيح</option><option value="electronic devices">أجهزة إلكترونية</option></select></label><label>اللون<input id="itemColor" type="text" placeholder="مثال: أزرق داكن"></label><label>الموقع<input id="itemLocation" type="text" placeholder="مثال: عمّان - شارع الجامعة" required></label><label>التاريخ والوقت<input id="itemDate" type="datetime-local" required></label><label class="upload-field">صورة الغرض<input id="itemImage" type="file" accept="image/jpeg,image/png,image/webp"><span id="fileName">اختر JPG / PNG / WEBP</span></label><label class="full-field">الوصف<textarea id="itemDescription" rows="5" placeholder="اكتب العلامة التجارية، الشكل، العلامات المميزة، والمكان بالتفصيل..." required></textarea></label></div><button class="neon-button submit-report" type="submit">نشر البلاغ وتشغيل المطابقة <span>←</span></button></form>
+        </div>
+      </section>
+
+      <section id="userMine" class="user-view"><div class="page-title action-title"><div><span>MY REPORTS</span><h1>بلاغاتي</h1><p>إدارة الصور والحالات ومراجعة النتائج المقترحة.</p></div><button class="neon-button" data-user-view="userCreate">＋ بلاغ جديد</button></div><div id="myReportsGrid" class="reports-grid"></div></section>
+
+      <section id="userConnect" class="user-view">
+        <div class="page-title action-title"><div><span>TRUSTED CONNECTION</span><h1>مركز التواصل</h1><p>طلبات آمنة، محادثات خاصة، وقناة مباشرة مع إدارة FindBack.</p></div><button id="refreshUserCommunication" class="outline-button">↻ تحديث</button></div>
+
+        <div id="communicationSummary" class="communication-summary"></div>
+
+        <div class="contact-center-grid">
+          <section class="contact-request-card incoming-card"><header><div><span>INCOMING</span><h2>طلبات واردة</h2></div><i>↘</i></header><div id="incomingRequests" class="request-list"></div></section>
+          <section class="contact-request-card outgoing-card"><header><div><span>OUTGOING</span><h2>طلبات مرسلة</h2></div><i>↖</i></header><div id="outgoingRequests" class="request-list"></div></section>
+          <section class="support-compose-card"><span>ADMIN SUPPORT / DIRECT</span><h2>تحدّث مع الإدارة</h2><p>أرفق بلاغًا إن كان طلبك مرتبطًا بحالة محددة.</p><form id="supportConversationForm"><label>البلاغ المرتبط <select id="supportReportSelect"><option value="">بدون بلاغ محدد</option></select></label><label>رسالتك <textarea id="supportMessage" rows="4" placeholder="اشرح ما الذي تحتاج مساعدة فيه..." required></textarea></label><button class="neon-button full" type="submit">إرسال للإدارة <span>←</span></button></form></section>
+        </div>
+
+        <div class="conversation-workspace user-conversation-theme">
+          <aside class="conversation-index"><header><div><span>CONVERSATIONS</span><h2>محادثاتك</h2></div><button id="refreshUserConversations" aria-label="تحديث المحادثات">↻</button></header><div id="userConversationList" class="conversation-list"></div></aside>
+          <section class="chat-stage"><div id="userChatEmpty" class="chat-empty"><span>⌘</span><h2>اختر محادثة</h2><p>ستظهر الرسائل هنا بعد قبول طلب التواصل أو بدء محادثة دعم.</p></div><div id="userChatActive" class="chat-active hidden"><header class="chat-header"><div><span id="userChatAvatar">F</span><p><strong id="userChatName">محادثة</strong><small id="userChatMeta">قناة آمنة</small></p></div><div class="chat-header-actions"><button id="userCompleteRecovery" class="complete-recovery hidden" data-complete-recovery>✓ تم استلام الغرض</button><i>PRIVATE CHANNEL</i></div></header><div id="userMessagesList" class="message-stream"></div><form id="userMessageForm" class="message-composer"><textarea id="userMessageInput" rows="2" placeholder="اكتب رسالة واضحة..." required></textarea><button class="neon-button" type="submit">إرسال ←</button></form></div></section>
+        </div>
+      </section>
+
+      <section id="userNotifications" class="user-view">
+        <div class="page-title action-title"><div><span>NOTIFICATION CENTER</span><h1>الإشعارات</h1><p>تابع طلبات التواصل، القبول، والرسائل الجديدة.</p></div><button id="markAllUserNotifications" class="outline-button">تعيين الكل كمقروء</button></div><div id="userNotificationList" class="notification-list light-notifications"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="adminShell" class="admin-shell hidden">
+    <aside class="admin-sidebar">
+      <a class="brand admin-brand" href="#" data-admin-view="adminOverview"><span class="brand-mark"><b></b><i></i></span><span><strong>FindBack</strong><small>ADMIN / CONTROL</small></span></a>
+      <button class="language-toggle sidebar-language" data-language-toggle type="button" aria-label="تغيير اللغة">EN</button>
+      <div class="admin-mode-label">PLATFORM CONTROL</div>
+      <nav><button class="active" data-admin-view="adminOverview"><i>▦</i><span>مركز القيادة</span></button><button data-admin-view="adminReports"><i>≡</i><span>إدارة البلاغات</span></button><button data-admin-view="adminAnalytics"><i>⌁</i><span>التحليلات</span></button><button data-admin-view="adminActivity"><i>◷</i><span>النشاط والتنبيهات</span></button><button data-admin-view="adminMessages"><i>✦</i><span>محادثات الدعم</span><b id="adminMessageBadge" class="nav-badge hidden">0</b></button><button data-admin-view="adminNotifications"><i>◉</i><span>الإشعارات</span><b id="adminNotificationBadge" class="nav-badge hidden">0</b></button></nav>
+      <div class="system-chip"><i></i><div><strong>API CONNECTED</strong><small>النظام متصل بالبيانات</small></div></div>
+      <button id="adminLogout" class="admin-logout">تسجيل الخروج <span>↗</span></button>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar"><div><span id="adminDate">SYSTEM / TODAY</span><h1 id="adminPageTitle">مركز القيادة</h1></div><div class="admin-profile"><div><strong id="adminName">Admin</strong><small>مدير النظام</small></div><span id="adminInitial">A</span></div></header>
+
+      <section id="adminOverview" class="admin-view active-admin-view">
+        <div class="admin-command-hero"><div class="command-overlay"><span>COMMAND CENTER / LIVE</span><h2 id="adminGreeting">الصورة الكاملة للنظام.</h2><p>قراءة فورية للحالات، التوزيع، ونشاط البلاغات.</p></div><div class="command-live"><i></i><span>LIVE DATA</span><strong id="adminTotalHero">0</strong><small>بلاغ مسجّل</small></div></div>
+        <div id="statisticsGrid" class="admin-stats"></div>
+        <div class="overview-grid"><section class="admin-card status-card"><div class="admin-card-head"><div><span>STATUS DISTRIBUTION</span><h2>توزيع الحالات</h2></div><small>مباشر</small></div><div class="status-visual"><div id="statusDonut" class="donut"><div><strong>0</strong><span>إجمالي</span></div></div><div id="statusLegend" class="status-legend"></div></div></section><section class="admin-card ratio-card"><div class="admin-card-head"><div><span>REPORT BALANCE</span><h2>مفقود مقابل موجود</h2></div></div><div id="typeBalance" class="type-balance"></div></section><section class="admin-card recent-card"><div class="admin-card-head"><div><span>LATEST SIGNALS</span><h2>آخر البلاغات</h2></div><button data-admin-view="adminReports">عرض الكل</button></div><div id="adminRecentMini" class="recent-mini"></div></section></div>
+      </section>
+
+      <section id="adminReports" class="admin-view"><div class="admin-page-head"><div><span>REPORT OPERATIONS</span><h1>إدارة البلاغات</h1><p>بحث وفلترة وتحديث حالة أي بلاغ من مكان واحد.</p></div><button id="refreshAdminButton" class="admin-outline">↻ تحديث البيانات</button></div><div class="admin-filters"><label><span>⌕</span><input id="adminReportSearch" type="search" placeholder="بحث باسم الغرض أو الموقع..."></label><select id="adminStatusFilter"><option value="">كل الحالات</option><option value="open">مفتوح</option><option value="matched">متطابق</option><option value="closed">مغلق</option></select><select id="adminTypeFilter"><option value="">كل الأنواع</option><option value="lost">مفقود</option><option value="found">موجود</option></select></div><div class="admin-table-card"><div class="table-caption"><div><i></i><span id="adminTableCount">0 سجل</span></div><small>اضغط حفظ بعد تغيير الحالة</small></div><div class="table-scroll"><table><thead><tr><th>الرقم</th><th>الغرض</th><th>التصنيف</th><th>النوع</th><th>الموقع</th><th>الحالة</th><th>إجراء</th></tr></thead><tbody id="adminReportsTable"></tbody></table></div></div></section>
+
+      <section id="adminAnalytics" class="admin-view"><div class="admin-page-head"><div><span>PLATFORM ANALYTICS</span><h1>تحليلات المنصة</h1><p>قراءة توزيع البلاغات حسب التصنيف والموقع والزمن.</p></div></div><div class="analytics-grid"><section class="admin-card category-analysis"><div class="admin-card-head"><div><span>CATEGORY VOLUME</span><h2>البلاغات حسب التصنيف</h2></div></div><div id="adminCategoryChart" class="bar-chart"></div></section><section class="admin-card location-analysis"><div class="admin-card-head"><div><span>TOP LOCATIONS</span><h2>أكثر المواقع نشاطًا</h2></div></div><div id="adminLocationList" class="location-list"></div></section><section class="admin-card trend-analysis"><div class="admin-card-head"><div><span>REPORT TIMELINE</span><h2>النشاط خلال آخر 7 أيام</h2></div></div><div id="adminTrendChart" class="trend-chart"></div></section><section class="admin-card performance-analysis"><div class="admin-card-head"><div><span>RESOLUTION RATE</span><h2>مؤشرات الأداء</h2></div></div><div id="adminPerformance" class="performance-grid"></div></section></div></section>
+
+      <section id="adminActivity" class="admin-view"><div class="admin-page-head"><div><span>ACTIVITY & ALERTS</span><h1>النشاط والتنبيهات</h1><p>آخر التغييرات والحالات التي تحتاج إلى مراجعة.</p></div></div><div class="activity-layout"><section class="admin-card"><div class="admin-card-head"><div><span>ACTIVITY FEED</span><h2>سجل النشاط</h2></div></div><div id="adminActivityFeed" class="activity-feed"></div></section><section class="admin-card"><div class="admin-card-head"><div><span>REVIEW QUEUE</span><h2>بحاجة إلى انتباه</h2></div></div><div id="adminAlerts" class="alert-list"></div></section></div></section>
+
+      <section id="adminMessages" class="admin-view">
+        <div class="admin-page-head"><div><span>SUPPORT CHANNELS</span><h1>محادثات الدعم</h1><p>استقبل طلبات المساعدة وتابع كل حالة دون كشف بيانات المستخدمين للعموم.</p></div><button id="refreshAdminConversations" class="admin-outline">↻ تحديث المحادثات</button></div>
+        <div class="conversation-workspace admin-conversation-theme"><aside class="conversation-index"><header><div><span>SUPPORT INBOX</span><h2>صندوق الوارد</h2></div></header><div id="adminConversationList" class="conversation-list"></div></aside><section class="chat-stage"><div id="adminChatEmpty" class="chat-empty"><span>⌘</span><h2>اختر طلب دعم</h2><p>افتح أي محادثة للاطلاع على الرسالة والرد على المستخدم.</p></div><div id="adminChatActive" class="chat-active hidden"><header class="chat-header"><div><span id="adminChatAvatar">U</span><p><strong id="adminChatName">مستخدم</strong><small id="adminChatMeta">دعم مباشر</small></p></div><i>ADMIN CHANNEL</i></header><div id="adminMessagesList" class="message-stream"></div><form id="adminMessageForm" class="message-composer"><textarea id="adminMessageInput" rows="2" placeholder="اكتب رد الإدارة..." required></textarea><button class="neon-button" type="submit">إرسال ←</button></form></div></section></div>
+      </section>
+
+      <section id="adminNotifications" class="admin-view">
+        <div class="admin-page-head"><div><span>ADMIN NOTIFICATIONS</span><h1>إشعارات الإدارة</h1><p>طلبات الدعم والرسائل الجديدة تظهر هنا فور وصولها.</p></div><button id="markAllAdminNotifications" class="admin-outline">تعيين الكل كمقروء</button></div><div id="adminNotificationList" class="notification-list dark-notifications"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="matchesModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="matchesTitle"><div class="modal-backdrop" data-close-matches></div><div class="matches-panel"><button class="modal-close" data-close-matches aria-label="إغلاق">×</button><span class="form-code">الرؤية الذكية / هجين 65+35</span><h2 id="matchesTitle">مطابقات الرؤية الذكية</h2><p>ترتيب هجين يجمع بيانات البلاغ مع بصمة الصورة عندما تتوفر صورتان.</p><div id="matchesContent" class="matches-content"></div></div></div>
+
+  <script src="app.js?v=20"></script>
+</body>
+</html>
